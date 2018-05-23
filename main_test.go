@@ -4,7 +4,7 @@ import (
 	"testing"
 	"fmt"
 )
-var v error;
+var v error
 
 func TestIncrementNumber1(t *testing.T) {
 	// Основной тест
@@ -73,7 +73,7 @@ func TestSetMaximumValueExcept1(t *testing.T) {
 }
 
 func TestSetMaximumValueExcept2(t *testing.T) {
-	v = setMaximumValue(22147483647);
+	v = setMaximumValue(22147483647)
 	//Нельзя позволять установить тут число больше максимального значения для int
 
 	if v!=nil{

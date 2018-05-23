@@ -5,16 +5,17 @@ import (
 )
 
 // Основаня глобальная переменная, содержашая число
-var number int=0
+var number int32=0
+const maximum_value int32=2147483647
 
 // Максимальное значение текущего числа.
 // По умолчанию максимум -- максимальное значение int.
-var globalMaximumValue=2147483647
+var globalMaximumValue=maximum_value
 
 // Возвращает текущее число. В самом начале это ноль.
 // * Аргументы- нет
 // * Возвращает- текущее значение number. Тип int
-func getNumber() int{
+func getNumber() int32{
 	return number
 }
 
@@ -23,7 +24,7 @@ func getNumber() int{
 // * Аргументы- нет
 // * Возвращает-  нет
 func incrementNumber(){
-	number+=1;
+	number+=1
 
 	//Если текущее число достигает максимального значения, оно обнуляется
 	//начинает снова возвращать ноль, и снова один после следующего вызова
@@ -34,10 +35,10 @@ func incrementNumber(){
 }
 
 //Устанавливает максимальное значение текущего числа.
-func setMaximumValue(maximumValue int) error{
+func setMaximumValue(maximumValue int32) error{
 
 	//Нельзя позволять установить тут число больше лимита для  int.
-	if maximumValue>2147483647{
+	if maximumValue>maximum_value{
 		return errors.New("Wrong Maximum value. Cant be more than 2147483647")
 	}
 
