@@ -6,8 +6,9 @@ import (
 )
 var v error
 
+// Основной тест
 func TestIncrementNumber1(t *testing.T) {
-	// Основной тест
+
 	fmt.Println("Start main test")
 
 	//Текущее значение
@@ -35,6 +36,7 @@ func TestIncrementNumber1(t *testing.T) {
 
 
 }
+
 func TestSetMaximumValueNorm(t *testing.T) {
 	// number должен быть 501
 	// Мы станавливаем  MaximumValue 300
